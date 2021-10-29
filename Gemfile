@@ -36,6 +36,8 @@ gem 'mini_racer'
     gem 'rspec-rails', '~> 3.7'
 end
 
+gem 'simplecov', require: false, group: :test
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
