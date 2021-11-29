@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
 
+  def home
+    @projects = Project.all
+  end
   
   # GET /projects or /projects.json
   def index
@@ -58,7 +61,7 @@ class ProjectsController < ApplicationController
     authenticate_student!
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
+      format.html { redirect_to '/', notice: "Project was successfully destroyed." }
       format.json { head :no_content }
     end
   end

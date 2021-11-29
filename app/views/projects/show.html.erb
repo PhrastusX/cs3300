@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div class="jumbotron text-center">
+  <h1 class = 'container'><strong><%= @project.title %></strong> </h1>
+  <p class = 'container'>Description: <%= @project.description %> </p>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<br>
+<div class="container">
+<a class="btn btn-info" href= '/'  role="button">Back</a>
+<%if student_signed_in? %>
+<a class="btn btn-info"  <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>   </a>
+<a class="btn btn-info" <%= link_to 'Edit', edit_project_path(@project) %>   </a>
+<% end %> 
+</div>

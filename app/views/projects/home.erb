@@ -1,0 +1,58 @@
+<a id="notice"><%= notice %></a>
+<div class="jumbotron text-center">
+  <h1 class='dispay-4'>Theos Project Portfolio </h1>
+  <hr class="my-4">
+  <p class="container text-left font-weight-bold"> About this portfolio:</p>
+  <p class="container text-left">
+    This portolio was created using ruby on rails. It is meant to showcase projects
+    that I have worked on during my time at UCCS.
+  </p>
+  <% if student_signed_in? %>
+  <p class = "container text-left">
+  <a class="btn btn-success btn-xlrg " href= "projects/new" role="button">Create New Project</a></p>
+  <%end%>
+
+</div>
+
+
+<div class = "container">
+  <div class = "row">
+    <% @projects.each do |project| %>
+      <div class = "col-4">
+        <div class="container">
+
+        <hr class="my">
+          <div class="row">
+          
+            <p class="container font-weight-bold">
+              <%= project.title %> 
+            <p>
+          </div>
+         
+          <div class="row">
+          <p class = "container">
+          <%= project.description %> 
+          </p>
+          </div>
+          <br>
+          <div class="row">
+            <div class="container">
+            <a class="btn btn-info" href= projects/<%= project.id %> role="button">Info</a>
+
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      
+    <%end%>
+
+  </div>
+</div>
+
+ 
+
+
