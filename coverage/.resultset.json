@@ -99,32 +99,6 @@
           null
         ]
       },
-      "/root/cs3300/app/helpers/application_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/root/cs3300/app/helpers/projects_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/root/cs3300/app/mailers/application_mailer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/root/cs3300/app/jobs/application_job.rb": {
         "lines": [
           0,
@@ -155,6 +129,6 @@
         }
       }
     },
-    "timestamp": 1638219451
+    "timestamp": 1639083912
   }
 }
